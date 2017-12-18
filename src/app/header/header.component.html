@@ -1,0 +1,68 @@
+<!-- core/navbar.component.html -->
+
+<div class="container site" detect-scroll (onScroll)="handleScroll($event)" > 
+  
+  <div class="page-header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+      <div class="container-fluid">
+        <h1 id="siteHeader">FFFFFFFFF</h1>
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button> <!-- #1 -->
+              <a class="navbar-brand">Project Manager</a>
+          </div>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+          <ul class="nav navbar-nav">
+              <li><a>Link 1</a></li>
+              <li><a>Link 2</a></li>
+              <li dropdown class="dropdown" triggers="hover"  #dp="bs-dropdown">
+                  <a id="nav_a" dropdownToggle href="#" class="dropdown-toggle"  data-toggle="dropdown" data-hover="dropdown">
+                      Anonymous <b class="caret"></b>
+                      </a>
+               
+                  <ul *dropdownMenu class="dropdown-menu spec" role="menu" (mouseleave)="dp.hide()">
+                    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li class="divider dropdown-divider"></li>
+                    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                    </li>
+                  </ul>
+              
+              </li>
+              <li><a>Link 3</a></li>
+              <li dropdown class="dropdown" triggers="hover"  #dp2="bs-dropdown">
+                <a id="nav_a" dropdownToggle href="#" class="dropdown-toggle"  data-toggle="dropdown" data-hover="dropdown">
+                    Anonymous-2 <b class="caret"></b>
+                    </a>
+             
+                <ul *dropdownMenu class="dropdown-menu spec" role="menu" (mouseleave)="dp2.hide()">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Action-2</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Another action-2</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Something else here-2</a></li>
+                  <li class="divider dropdown-divider"></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Separated link-2</a>
+                  </li>
+                </ul>
+            
+            </li>
+          </ul>
+        </div> <!-- #2 -->
+      </div>
+    </nav>
+</div>
+</div>
+
+<!--
+<section>
+<div class="container" style = "background-color:red;height:100%;width:100%;position:absolute;">
+<div id="bottom" >
+<h1>AAAAA</h1>
+</div>
+</div>
+</section>
+-->
