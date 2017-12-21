@@ -6,11 +6,26 @@ html, body {
 }
 
 app-header {
-  /* position:fixed;*/
    width:100%;
+}
+/*
+app-middle-up {
+  width: 100%;
 }
 
-app-middle-up {
-  /* margin-top:0px;*/
-   width:100%;
+app-middle-down {
+  width: 100%;
 }
+*/
+.container {
+  width:100%;
+  padding: 0;
+  margin: 0;
+}
+
+.col {
+  padding: 0;
+  margin: 0;
+}
+
+

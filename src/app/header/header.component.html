@@ -17,8 +17,8 @@
           </div>
         <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
           <ul class="nav navbar-nav">
-              <li><a>Link 1</a></li>
-              <li><a>Link 2</a></li>
+              <li><a routerLink="/green" routerLinkActive="active">Link 1</a></li>
+              <li><a routerLink="/purple" routerLinkActive="active">Link 2</a></li>
               <li dropdown class="dropdown" triggers="hover"  #dp="bs-dropdown">
                   <a id="nav_a" dropdownToggle href="#" class="dropdown-toggle"  data-toggle="dropdown" data-hover="dropdown">
                       Anonymous <b class="caret"></b>

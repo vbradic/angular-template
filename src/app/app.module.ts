@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -14,13 +16,16 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AppComponent } from './app.component';
 import { MiddleUpComponent } from './middle-up/middle-up.component';
 import { HeaderComponent } from './header/header.component';
+import { MiddleDownComponent } from './middle-down/middle-down.component';
+
+import { routingComponents } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MiddleUpComponent,
-    HeaderComponent
+    HeaderComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { HeaderComponent } from './header/header.component';
     ModalModule.forRoot(),
     CollapseModule.forRoot(),
     ScrollEventModule,
-    StickyModule
+    StickyModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
